@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width,
+        initial-scale=1.0">
+        <title>Website Design</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel = "stylesheet" href = "footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="https://kit.fontawesome.com/84870b3410.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body onload="showModal()">
+
+        <section class="header">  
+            <nav>
+              <a href="index.html"><img src="images/logo.png"></a>
+              <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                  <li><a href="food.html">Food</a></li>
+                  <li><a href="clothes.html">Clothe</a></li>
+                  <li><a href="#">Game</a></li>
+                  <li><a href="architecture.html">Architecture</a></li>
+                  <li><a href="login.html">Login</a></li>
+                </ul>
+              </div>
+              <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <div class="text-box">
+              <h1>Welcome to Malaysia Culture!</h1>
+              <p>Experience the enchanting world of Malaysian culture,
+                 where diverse traditions blend harmoniously to create 
+                 a unique and vibrant way of life. <br> From the bustling 
+                 streets of Kuala Lumpur to the tranquil villages of 
+                 Penang, Malaysia offers a captivating journey through 
+                 its cultural heritage.</p>
+            </div>
+
+            <div class = "cookie_box" id="cookie_box">
+              <img src="images/cookie.png">
+              <h3>Cookie Policy</h3>
+              <p>This site can store cookies on your browser and disclose information
+                in accordance with our cookie policy
+              </p>
+              <button id="activeBtn">Accept</button>
+              
+            </div>
+
+        </section>
+
+        <!-------Cultural------->
+        <section class="culture">
+          <h1>Cultural Diversity</h1>
+          <p>Malaysia is a true melting pot of cultures, with influences from Malay, Chinese, Indian, indigenous tribes, and various other communities.
+            <br> This fusion has led to a dynamic cultural landscape that is reflected in its art, cuisine, festivals, and daily life.</p>
+
+            <div class="row">
+              <div class="culture-col">
+                <h3>Harmony in Diversity</h3>
+                <p>The heart of Malaysia's strength lies in its ability to foster unity amidst diversity.<br>
+                  Malays, Chinese, Indians, and indigenous communities seamlessly interweave their traditions, languages, and values, 
+                  <br> forming a society that embraces differences while celebrating commonalities.</p>
+              </div>
+              <div class="culture-col">
+                <h3>Languages and Communication</h3>
+                <p>The linguistic landscape of Malaysia is a testament to its multicultural ethos. Bahasa Malaysia serves as the official language,
+                  <br>while English, Mandarin, Tamil, and various indigenous languages find their place in daily conversations, 
+                  <br>reflecting the nation's multilingual fluency.</p>
+              </div>
+              <div class="culture-col">
+                <h3>Religious Coexistence</h3>
+                <p> Malaysia is a haven where mosques, temples, churches, and other places of worship coexist side by side, 
+                  <br>symbolizing the nation's respect for religious freedom. The call to prayer harmonizes with the ringing of temple bells and the hymns of churches, 
+                  <br>creating a soul-stirring symphony.</p>
+              </div>
+            </div>
+        </section>
+
+        <!---------Video link-------->
+        <section class="container">
+          <h1>Watch video to visit our culture in Malaysia!</h1>
+          <div class="row">
+            <div class="col">
+              <div class="feature-img">
+                <img src="images/multipleculture.jpg" width="100%">
+                <img src="images/playButton.png" class="play-btn" onclick="playVideo('video.mp4')">
+              </div>
+            </div>
+            <div class="col">
+              <div class="small-img-row">
+                <p>Embark on a cultural odyssey through Malaysia, where diverse traditions converge to create a rich tapestry of experiences. From the bustling streets of 
+                  Kuala Lumpur to the serene villages of Penang, every corner unveils a unique facet of this captivating nation. Explore the harmonious coexistence of Malay,
+                   Chinese, Indian, and indigenous influences, shaping a society that cherishes unity in diversity. Discover a linguistic mosaic and witness the seamless blend 
+                   of religions. Malaysia invites you to witness its vibrant cultural kaleidoscope.</p>
+              </div>
+            </div>
+            <div class="video-player" id="videoplayer"> 
+              <video width="100%" controls autoplay id="myVideo">
+                <source src="video.mp4" type="video/mp4">
+              </video>
+              <img src="images/closeVideo.png" class="close-btn" onclick="stopVideo()">
+            </div>
+          </div>
+        </section>
+
+        <!------------festival-------------->
+        <section class="festival">
+          <div class="festival-container">
+            <h1>Experience Malaysia's Rich Multicultural Festivals</h1>
+            <p>Malaysia is a diverse country with a rich tapestry of cultures, each contributing to a vibrant tapestry of festivals celebrated throughout the year. Here are some of the most significant festivals celebrated by the Malay, Chinese, and Indian communities:</p>
+            <div class="row">
+              <div class="festival-col">
+                <img src="images/hariraya.jpg">
+                <h3>Hari Raya Aidilfitri (Eid al-Fitr)</h3>
+                <p>Hari Raya Aidilfitri is the most significant festival for the Malay community. It marks the end of Ramadan, a month of fasting and prayer. Families come together to seek forgiveness and celebrate with feasts, traditional performances, and the giving of 'duit raya' (money packets).</p>
+              </div>
+              <div class="festival-col">
+                <img src="images/chinesenewyear.jpg">
+                <h3>Chinese New Year</h3>
+                <p>Chinese New Year, also known as Lunar New Year, is celebrated with great enthusiasm by the Chinese community. It's a time for family reunions, vibrant parades, lion and dragon dances, and the giving of 'ang pow' (red envelopes containing money) for good luck and prosperity.</p>
+              </div>
+              <div class="festival-col">
+                <img src="images/deepavali.jpg">
+                <h3>Deepavali (Diwali)</h3>
+                <p>Deepavali, also known as the Festival of Lights, is celebrated by the Indian community. Homes are adorned with lamps and candles to symbolize the triumph of light over darkness. Families come together for prayers, feasts, and the exchange of sweets and gifts.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+  <!--------Java Script for toggle menu-------->
+  <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+    }
+
+    const cookie_box = document.getElementById("cookie_box");
+    activeBtn = document.getElementById("activeBtn");
+
+    activeBtn.addEventListener('click', function() {
+      document.cookie = "CookieBy=InventionTricks; expires" + new Date(2023, 0, 1).toUTCString();
+      document.cookie = "Name=Huey; max-age="+60*60*24*30;
+      document.cookie = "LastName=ZHIYI; max-age="+60*60*24*30;
+
+      if(document.cookie){
+        cookie_box.classList.add('hide');
+      }
+    });
+
+    var videoplayer = document.getElementById("videoplayer");
+    var myVideo = document.getElementById("myVideo");
+
+    function stopVideo() {
+      videoplayer.style.display = "none";
+
+      myVideo.pause();
+    }
+
+    function playVideo(file) {
+      myVideo.src = file;
+      videoplayer.style.display = "block";
+    }
+
+  </script>
+
+  <!---------Footer---------->
+  <footer class = "footer-distributed">
+    <div class = "footer-left">
+        <img src = "images/logo.png" width = "100">
+        <p class = "footer-links">
+            <a href = "index.html" class = "link-1" target = "_self">Home </a>
+            <a href = "food.html" target = "_self">Food</a>
+            <a href = "#traditional-game" target = "_self">Traditional Game</a>
+            <a href = "clothes.html" target="_self">Clothes</a>
+            <a href = "architecture.html" target = "_self">Architecture & Monuments</a>
+        </p>
+        <p class = "footer-company-name"> myCulture&copy;2023</p>
+    </div>
+
+    <div class = "footer-center">
+        <div>
+            <i class = "fas fa-map-marker-alt"></i>
+            <p><span>Jalan Sungai Long, Bandar Sungai Long,</span> 43000 Kajang, Selangor.</p>
+        </div>
+        <div>
+            <i class = "fas fa-phone-alt"></i>
+            <p>+03-9086 0288</p>
+        </div>
+        <div>
+            <i class = "fas fa-envelope"></i>
+            <p><a href = "https://www.utar.edu.my">support@myCulture.com</a></p>
+        </div>
+    </div>
+
+    <div class = "footer-right">
+        <p class = "footer-company-about">
+            <span>About myCulture</span>
+            Introduction Cultures In Malaysia.
+        </p>
+        <div class = "footer-icons">
+            <a href = "https://youtube.com"><i class = "fab fa-youtube"></i></a>
+            <a href = "https://tiktok.com"><i class = "fab fa-tiktok"></i></a>
+            <a href = "https://www.facebook.com"><i class = "fab fa-facebook-f"></i></a>
+            <a href = "https://instagram.com"><i class = "fab fa-instagram"></i></a>
+            <a href = "https://twitter.com"><i class = "fab fa-twitter"></i></a>
+            <a href = "https://reddit.com"><i class = "fab fa-reddit"></i></a>
+        </div>
+    </div>
+
+</footer>
+      </body>
+</html>

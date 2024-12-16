@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="icon" type="image/x-icon" href="images/login.png" />
+    <link rel = "stylesheet" href = "footer.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/84870b3410.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="register.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="clothes.html">Clothes</a></li>
+            <li><a href="#">Games</a></li>
+            <li><a href="architecture.html">Architecture</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+    
+
+    <form class="needs-validation" novalidate id="register-form">
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center font-weight-bold">
+                  Register
+                </h5>
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder="Enter your first name"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter your first name.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder="Enter your last name"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter your last name.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phoneNumber"
+                    placeholder="Enter your phone number"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter your phone number.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                  <div class="invalid-feedback">Please enter a password.</div>
+                </div>
+                <div class="form-group">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="confirmPassword"
+                    placeholder="Confirm your password"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please confirm your password.
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                  Register
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <p class="text-muted text-center mt-3 mb-0">
+      Already have an account?
+      <a href="login.html" class="text-primary ml-1">Login</a>
+    </p>
+
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      var barsIcon = document.querySelector(".fa-bars");
+      var timesIcon = document.querySelector(".fa-times");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+
+      // Add custom validation for password matching
+      var password = document.getElementById("password");
+      var confirmPassword = document.getElementById("confirmPassword");
+
+      confirmPassword.addEventListener("input", function () {
+        if (confirmPassword.value === password.value) {
+          confirmPassword.setCustomValidity("");
+        } else {
+          confirmPassword.setCustomValidity("Passwords must match.");
+        }
+      });
+
+      // Function to handle form submission and store user data in local storage
+      var registerForm = document.getElementById("register-form");
+
+      registerForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Get user input values
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        // Create an object to store user data
+        var userData = {
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          password: password,
+        };
+
+        // Store user data in local storage
+        localStorage.setItem("userData", JSON.stringify(userData));
+
+        // Redirect to the login page
+        window.location.href = "login.html";
+      });
+    </script>
+      <!---------Footer---------->
+  <footer class = "footer-distributed">
+    <div class = "footer-left">
+        <img src = "images/logo.png" width = "100">
+        <p class = "footer-links">
+            <a href = "index.html" class = "link-1" target = "_self">Home </a>
+            <a href = "food.html" target = "_self">Food</a>
+            <a href = "#traditional-game" target = "_self">Traditional Game</a>
+            <a href = "clothes.html" target="_self">Clothes</a>
+            <a href = "architecture.html" target = "_self">Architecture & Monuments</a>
+        </p>
+        <p class = "footer-company-name"> myCulture&copy;2023</p>
+    </div>
+
+    <div class = "footer-center">
+        <div>
+            <i class = "fas fa-map-marker-alt"></i>
+            <p><span>Jalan Sungai Long, Bandar Sungai Long,</span> 43000 Kajang, Selangor.</p>
+        </div>
+        <div>
+            <i class = "fas fa-phone-alt"></i>
+            <p>+03-9086 0288</p>
+        </div>
+        <div>
+            <i class = "fas fa-envelope"></i>
+            <p><a href = "https://www.utar.edu.my">support@myCulture.com</a></p>
+        </div>
+    </div>
+
+    <div class = "footer-right">
+        <p class = "footer-company-about">
+            <span>About myCulture</span>
+            Introduction Cultures In Malaysia.
+        </p>
+        <div class = "footer-icons">
+            <a href = "https://youtube.com"><i class = "fab fa-youtube"></i></a>
+            <a href = "https://tiktok.com"><i class = "fab fa-tiktok"></i></a>
+            <a href = "https://www.facebook.com"><i class = "fab fa-facebook-f"></i></a>
+            <a href = "https://instagram.com"><i class = "fab fa-instagram"></i></a>
+            <a href = "https://twitter.com"><i class = "fab fa-twitter"></i></a>
+            <a href = "https://reddit.com"><i class = "fab fa-reddit"></i></a>
+        </div>
+    </div>
+
+</footer>
+  </body>
+</html>

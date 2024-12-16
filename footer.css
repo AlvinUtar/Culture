@@ -1,0 +1,182 @@
+/* Box sizing for all elements */
+* {
+    box-sizing: border-box;
+}
+
+
+.footer-distributed {
+    background: #111514;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    width: 100%;
+    text-align: left;
+    font: bold 17px sans-serif;
+    padding: 57px 52px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+.footer-distributed .footer-left {
+    width: 42%;
+}
+
+/* The company logo */
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 37px 'Open Sans', cursive;
+    margin: 0;
+}
+
+/* Footer links */
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 22px 0 14px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.9;
+    font-weight: 410;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Change link color on hover */
+.footer-distributed .footer-links a:hover {
+    color: rgb(246, 170, 30);
+}
+
+/* Footer company name */
+.footer-distributed .footer-company-name {
+    color: #ffe9e9;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+.footer-distributed .footer-center {
+    width: 36%;
+}
+
+.footer-distributed .footer-center i {
+    font-size: 28px;
+    width: 38px;
+    height: 38px;
+    line-height: 45px;
+    margin: 10px 15px;
+    vertical-align: middle;
+    color: #ffffff; /* Change the color to white */
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 25px;
+    line-height: 38px;
+    color: #ffffff; /* Change the color to white */
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p:not(:first-child) {
+    font-size: 15px;
+}
+
+/* Change email link color on hover */
+.footer-distributed .footer-center a:hover {
+    color: rgb(246, 170, 30);
+}
+
+.footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight: 310;
+    font-size: 22px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+/* Footer Right */
+.footer-distributed .footer-right {
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 21px;
+    color: #bfc0c0;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 20px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 25px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a .icon-container {
+    background-color: #33383b;
+    border-radius: 1px;
+}
+
+.footer-distributed .footer-icons a i {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* Change only the icon color on hover */
+.footer-distributed .footer-icons a:hover i {
+    color: rgb(246, 170, 30);
+}
+
+/* Change icon container background on hover */
+.footer-distributed .footer-icons a:hover .icon-container {
+    background-color: rgb(246, 170, 30);
+}
+
+/* Change email link color to white when not pointed */
+.footer-distributed .footer-center a {
+    color: #ffffff;
+}
+

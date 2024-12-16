@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(images/banner.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 150px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+nav .fa{
+  display: none;
+}
+
+@media (max-width: 700px) {
+  /* Show the mobile menu icon (bars) and hide the desktop menu */
+  .nav-links ul {
+    padding: 30px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 0.6s;
+  }
+  nav .fa{
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    /* Add the following lines */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .nav-links ul{
+    padding: 30px;
+  }
+
+
+  /* Show the close icon (times) when the mobile menu is open */
+  .nav-links.active ul {
+    display: flex; /* Show the links in the mobile menu */
+  }
+
+  .fa-times {
+    display: block; /* Show the close icon */
+  }
+
+    @media(max-width: 700px) {
+      .row{
+        flex-direction: column;
+      }
+  }
+
+}
+
+/* Styles for the registration form */
+#register-form {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px; /* Adjust the margin-top value to move the form higher */
+}
+
+#register-form .card-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#register-form .form-group label {
+  font-weight: bold;
+}
+
+#register-form button[type="submit"] {
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+#register-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#register-form .text-muted {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#register-form .text-muted a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#register-form .text-muted a:hover {
+  text-decoration: underline;
+}
